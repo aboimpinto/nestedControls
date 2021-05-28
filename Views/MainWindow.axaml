@@ -1,0 +1,29 @@
+<Window 
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="using:nestedControls.ViewModels"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:nestedControls.Controls"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+    x:Class="nestedControls.Views.MainWindow"
+    Icon="/Assets/avalonia-logo.ico"
+    Title="nestedControls">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Window.Resources>
+        <Color x:Key="RedColorResource">Red</Color>
+        <Color x:Key="BlueColorResource">Blue</Color>
+    </Window.Resources>
+
+    <controls:CanvasControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{DynamicResource BlueColorResource}" >
+
+        <controls:InnerControl 
+            BackgroundColor="{DynamicResource RedColorResource}" />
+
+    </controls:CanvasControl>
+
+</Window>

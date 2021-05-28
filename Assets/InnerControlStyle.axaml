@@ -1,0 +1,18 @@
+<Styles 
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:controls="clr-namespace:nestedControls.Controls">
+  
+
+  <Style Selector="controls|InnerControl">
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Border  
+          Width="100"
+          Height="100"
+          Background="{Binding BackgroundColor, RelativeSource={RelativeSource TemplatedParent}}" />
+      </ControlTemplate>
+    </Setter>
+  </Style>
+
+</Styles>
